@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['black colony', 'blue colony', 'orange colony', 'red colony', 'wild colony', 'yellow colony']
+
+roboflow:
+  workspace: yeastlab
+  project: yeast-annotations
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yeastlab/yeast-annotations/dataset/1
