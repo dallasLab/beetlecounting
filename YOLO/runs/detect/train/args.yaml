@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: /datasets/beetle-annotations/data.yaml
+data: datasets/beetle-annotations/data.yaml
 epochs: 1000
 time: null
 patience: 100
@@ -33,7 +33,7 @@ multi_scale: false
 overlap_mask: true
 mask_ratio: 4
 dropout: 0.0
-val: true
+val: false
 split: val
 save_json: false
 save_hybrid: false

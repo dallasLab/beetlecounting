@@ -1,0 +1,6 @@
+train: ../train/images
+test: ../test/images
+val: ../val/images
+
+nc: 2
+names: ['testshape', 'beetle']
