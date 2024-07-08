@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: /home/caydens/Projects/YOLO/datasets/yeast-annotations/data.yaml
+data: /datasets/beetle-annotations/data.yaml
 epochs: 1000
 time: null
 patience: 100
