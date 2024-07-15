@@ -141,6 +141,9 @@ results = model(["../images/A10_336_0416.JPG",
  "../images/C3_304_43024.JPG",
  "../images/C8_288_43024.JPG"])
 
+for i, r in enumerate(results):
+  im_bgr = r.plot()
+  
 ```
 
 
