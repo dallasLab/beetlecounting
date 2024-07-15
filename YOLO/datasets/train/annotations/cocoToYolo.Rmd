@@ -17,11 +17,13 @@ test$annotations$bbox
 images <- test$image$id[c(1:9, 14)]
 imageNames <- test$image$file_name[c(1:9, 14)]
 imageNames <- gsub('.JPG', '', imageNames)
+truth <- c()
 
 for(i in 1:length(images)){
   tmp <- test$annotations[which(test$annotations$image_id == images[i]),]
   tmpInfo <- test$images[which(test$images$id == images[i]),]
   tmp2 <- cbind(0, do.call(rbind, tmp$bbox))
+  truth[i] <- nrow(tmp)
 
 # coco and yolo format for bbox are different (which is silly)
   xyolo <- (tmp2[,2] + (tmp2[,4]/2)) / tmpInfo$width
@@ -40,7 +42,7 @@ for(i in 1:length(images)){
     row.names=FALSE, col.names=FALSE)
 }
 
-
+truthDF <- data.frame(imageNames, truth)
 
 
 # when i=2 from above
@@ -113,3 +115,32 @@ plt.show()
 
 
 ```
+
+
+
+
+
+
+## get predictions from best fit model
+
+
+```{python}
+
+from ultralytics import YOLO
+
+# Load a pretrained YOLOv8n model
+model = YOLO("best.pt")
+
+# Run inference on an image
+results = model(["../images/A10_336_0416.JPG",
+ "../images/A6_257_0416.JPG",
+ "../images/A9_311_0416.JPG",
+ "../images/C1_330_43024.JPG",
+ "../images/C10_211_43024.JPG",
+ "../images/C2_160_43024.JPG",
+ "../images/C3_304_43024.JPG",
+ "../images/C8_288_43024.JPG"])
+
+```
+
+
