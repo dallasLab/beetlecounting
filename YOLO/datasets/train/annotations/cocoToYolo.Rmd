@@ -1,0 +1,46 @@
+
+
+Mash coco into yolo format 
+
+```{r}
+library(jsonlite)
+test <- fromJSON('/media/tad/sanDisk1TB/Science/beetlecounting/YOLO/datasets/train/annotations/instances_default.json' )
+
+test$annotations$bbox
+
+
+# needs to have labels folder with one txt file per image 
+# 5 entries per line (category (1); then coordinates of bbox)
+
+
+# only images 1-9 and 14 have annotations
+images <- test$image$id[c(1:9, 14)]
+imageNames <- test$image$file_name[c(1:9, 14)]
+imageNames <- gsub('.JPG', '', imageNames)
+
+for(i in 1:length(images)){
+  tmp <- test$annotations[which(test$annotations$image_id == images[i]),]
+  tmpInfo <- test$images[which(test$images$id == images[i]),]
+  tmp2 <- cbind(0, do.call(rbind, tmp$bbox))
+
+# coco and yolo format for bbox are different (which is silly)
+  xyolo <- (tmp2[,2] + (tmp2[,4]/2)) / tmpInfo$width
+  yyolo <- (tmp2[,3] - (tmp2[,5]/2)) / tmpInfo$height
+  wyolo <- tmp2[,4] / tmpInfo$width
+  hyolo <- tmp2[,5] / tmpInfo$height
+
+  tmpYolo <- cbind(tmp2[,1], xyolo, yyolo, wyolo, hyolo)
+  
+  print(range(xyolo+wyolo))
+  print(range(yyolo+hyolo))
+  print(range(xyolo-wyolo))
+  print(range(yyolo-hyolo))
+
+  write.table(tmpYolo, file=paste(imageNames[i], '.txt', sep=''), 
+    row.names=FALSE, col.names=FALSE)
+}
+
+
+
+```
+
