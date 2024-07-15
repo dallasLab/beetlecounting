@@ -1,8 +1,8 @@
-data/obj_train_data/A6_257_0416.JPG
-data/obj_train_data/A9_311_0416.JPG
-data/obj_train_data/A10_336_0416.JPG
-data/obj_train_data/C10_211_43024.JPG
-data/obj_train_data/C1_330_43024.JPG
-data/obj_train_data/C2_160_43024.JPG
-data/obj_train_data/C3_304_43024.JPG
-data/obj_train_data/C8_288_43024.JPG
+datasets/train/images/A6_257_0416.JPG
+datasets/train/images/A9_311_0416.JPG
+datasets/train/images/A10_336_0416.JPG
+datasets/train/images/C10_211_43024.JPG
+datasets/train/images/C1_330_43024.JPG
+datasets/train/images/C2_160_43024.JPG
+datasets/train/images/C3_304_43024.JPG
+datasets/train/images/C8_288_43024.JPG

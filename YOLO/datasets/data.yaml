@@ -3,4 +3,5 @@ test: ../test/images
 val: ../val/images
 
 nc: 1
-names: ['beetle']
+names: 
+  0: beetle

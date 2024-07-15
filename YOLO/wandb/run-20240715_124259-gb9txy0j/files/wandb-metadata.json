@@ -1,0 +1,166 @@
+{
+    "os": "Linux-6.5.0-41-generic-x86_64-with-glibc2.35",
+    "python": "3.9.13",
+    "heartbeatAt": "2024-07-15T16:43:00.501672",
+    "startedAt": "2024-07-15T16:42:59.724329",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "detect",
+        "train",
+        "data=/media/tad/sanDisk1TB/Science/beetlecounting/YOLO/datasets/data.yaml",
+        "model=/media/tad/sanDisk1TB/Science/beetlecounting/YOLO/yolov8n.pt",
+        "epochs=50",
+        "imgsz=1200"
+    ],
+    "state": "running",
+    "program": "/home/tad/anaconda3/bin/yolo",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/dallasLab/beetlecounting.git",
+        "commit": "fd912a4473f9a531cd3f46b805f5fad2d092ecba"
+    },
+    "email": "tad.a.dallas@gmail.com",
+    "root": "/media/tad/sanDisk1TB/Science/beetlecounting",
+    "host": "office",
+    "username": "tad",
+    "executable": "/home/tad/anaconda3/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2.5653333333333346,
+        "min": 2200.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3.096,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.6,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.396,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.874,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.8,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.094,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.089,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.699,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.941,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.954,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.878,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.664,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 915.3232879638672,
+            "used": 657.8718795776367
+        }
+    },
+    "memory": {
+        "total": 125.709716796875
+    }
+}

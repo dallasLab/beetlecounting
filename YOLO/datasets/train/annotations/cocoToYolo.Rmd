@@ -25,7 +25,7 @@ for(i in 1:length(images)){
 
 # coco and yolo format for bbox are different (which is silly)
   xyolo <- (tmp2[,2] + (tmp2[,4]/2)) / tmpInfo$width
-  yyolo <- (tmp2[,3] - (tmp2[,5]/2)) / tmpInfo$height
+  yyolo <- (tmp2[,3] + (tmp2[,5]/2)) / tmpInfo$height
   wyolo <- tmp2[,4] / tmpInfo$width
   hyolo <- tmp2[,5] / tmpInfo$height
 
